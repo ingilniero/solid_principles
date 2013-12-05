@@ -5,9 +5,9 @@ describe('Liker', function() {
 
     var expectation = function() {
       expect($('#like').html()).toEqual('2');
-      done();
     };
 
     $('#like').click(expectation).click();
+    $('#post').remove();
   });
 });
