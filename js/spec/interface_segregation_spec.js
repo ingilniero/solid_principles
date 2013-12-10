@@ -1,6 +1,7 @@
 describe('Interface Segregation', function() {
   describe('Teacher', function() {
-    Teacher.mixin(UserActions);
+    Teacher.mixin(UserLoginActions);
+    Teacher.mixin(UserPasswordActions);
 
     it('can login', function() {
       var t = new Teacher('Jhon Doe');
@@ -14,7 +15,7 @@ describe('Interface Segregation', function() {
   });
 
   describe('Student', function() {
-    Student.mixin(UserActions);
+    Student.mixin(UserLoginActions);
 
     it('can login', function() {
       var s = new Student('Alexander Norht');
@@ -23,7 +24,7 @@ describe('Interface Segregation', function() {
 
     it('cannot request a password reset', function() {
       var s  = new Student('Alexander North');
-      // TODO
+      expect(s.resetPassword).toBeUndefined();
     });
   });
 });

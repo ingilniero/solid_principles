@@ -6,9 +6,14 @@ var Student = function() {
   return this;
 };
 
-var UserActions = function() {};
+var UserPasswordActions = function() {};
 
-UserActions.prototype = {
-  login: function(password) {},
+UserPasswordActions.prototype = {
   resetPassword: function() {}
+};
+
+var UserLoginActions = function() {};
+
+UserLoginActions.prototype = {
+  login: function(password) {},
 };
