@@ -12,7 +12,8 @@ describe('Book rental', function() {
     });
 
     it('retrieves the currently rented books', function() {
-      expect(stats.rentedBooks()).toEqual([ book ]);
+      var orders = Library.allOrders();
+      expect(stats.rentedBooks(orders)).toEqual([ book ]);
     });
   });
 });
