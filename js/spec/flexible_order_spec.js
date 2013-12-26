@@ -1,6 +1,6 @@
 describe('Book rental', function() {
   describe('FlexibleOrder', function() {
-    it('allows for some books to be returned prior the end date', function(){
+    xit('allows for some books to be returned prior the end date', function(){
       var user = new User('Sarah Gray');
       var order = new FlexibleOrder(user);
       var first_book = new Book('Foo', 6);
